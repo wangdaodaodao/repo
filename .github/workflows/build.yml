@@ -1,0 +1,55 @@
+name: 构建仓库索引
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'debs/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v3
+      
+    - name: 安装依赖
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dpkg-dev bzip2
+    
+    - name: 生成 Packages 文件
+      run: |
+        echo "📦 开始生成 Packages 文件..."
+        dpkg-scanpackages -m debs /dev/null > Packages
+        echo "✅ Packages 文件生成完成"
+        
+    - name: 压缩 Packages 文件
+      run: |
+        echo "🗜️  压缩 Packages 文件..."
+        bzip2 -fks Packages
+        echo "✅ Packages.bz2 生成完成"
+        
+    - name: 显示统计信息
+      run: |
+        PACKAGE_COUNT=$(grep -c "^Package:" Packages || echo "0")
+        echo "📊 构建统计:"
+        echo "   - 插件数量: $PACKAGE_COUNT"
+        echo "   - Packages 大小: $(ls -lh Packages | awk '{print $5}')"
+        echo "   - Packages.bz2 大小: $(ls -lh Packages.bz2 | awk '{print $5}')"
+    
+    - name: 提交更改
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "GitHub Actions"
+        git add Packages Packages.bz2
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 自动更新 Packages 索引文件" && echo "CHANGES_MADE=true" >> $GITHUB_ENV)
+        
+    - name: 推送更改
+      if: env.CHANGES_MADE == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
