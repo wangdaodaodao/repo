@@ -97,21 +97,6 @@ Description: 解锁永久Pro - Tg：@HelloWorld_1024
 Author: 🅷🆆
 Name: 🅷🆆 StressWatch
 
-Package: com.wangdaodao.
-Version: 1.0.0
-Architecture: iphoneos-arm
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao._1.0.0_iphoneos-arm.deb
-Size: 5512
-MD5sum: 6a28d35c49ac299b96c60593c57c6645
-SHA1: 0b0e4a3b929c65e28625e8bddbeb0fad1597766e
-SHA256: 95fd818ffd282615202782c95ebd531934c7583fd40f643eb0a4d9e885e5fc3d
-Section: Tweaks
-Description: 微信朋友圈尾巴自定义
-Author: wangdaodao
-Name: 微信朋友圈尾巴自定义
-
 Package: com.wangdaodao.104ios
 Version: 1.0.0
 Architecture: iphoneos-arm
