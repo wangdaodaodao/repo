@@ -97,6 +97,51 @@ Description: 解锁永久Pro - Tg：@HelloWorld_1024
 Author: 🅷🆆
 Name: 🅷🆆 StressWatch
 
+Package: com.wangdaodao.
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao._1.0.0_iphoneos-arm.deb
+Size: 5512
+MD5sum: 6a28d35c49ac299b96c60593c57c6645
+SHA1: 0b0e4a3b929c65e28625e8bddbeb0fad1597766e
+SHA256: 95fd818ffd282615202782c95ebd531934c7583fd40f643eb0a4d9e885e5fc3d
+Section: Tweaks
+Description: 微信朋友圈尾巴自定义
+Author: wangdaodao
+Name: 微信朋友圈尾巴自定义
+
+Package: com.wangdaodao.104ios
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.104ios_1.0.0_iphoneos-arm.deb
+Size: 357840
+MD5sum: 5e2cd25f4e3e8d670126596b74996b89
+SHA1: d28d12d0f0b2791133be6052939eb96ba7b331cf
+SHA256: de8625b7cfcf93988c0bb8fae8e7791bbd936a274e07976105e701fed9271ad7
+Section: Tweaks
+Description: 高德地图_1.0.4_iOS宝藏
+Author: wangdaodao
+Name: 高德地图_1.0.4_iOS宝藏
+
+Package: com.wangdaodao.387
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.387_1.0.0_iphoneos-arm.deb
+Size: 6231744
+MD5sum: bd253667d622231d188405a7353e4c68
+SHA1: d373abc66041217e16d18aeaabffb677c787f683
+SHA256: 30b650e0500eca559450b0a441e389ec3484fc56c4e00fcf8fd81aeee967961e
+Section: Tweaks
+Description: 微信助手_3.8-7
+Author: wangdaodao
+Name: 微信助手_3.8-7
+
 Package: com.wangdaodao.due
 Version: 2.0.2-1+debug
 Architecture: iphoneos-arm
@@ -112,6 +157,156 @@ Section: Tweaks
 Description: due 破解补丁
 Author: 王导导
 Name: due
+
+Package: com.wangdaodao.dyyy
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.dyyy_1.0.0_iphoneos-arm.deb
+Size: 394060
+MD5sum: 8277656e3356e0228abd3f0d0c12288a
+SHA1: b574a5a9555f1afc42176ff3d87a031bb457e833
+SHA256: 5cc5afbe91005221c15bbe28dde63eabcf11944aa765ed834c8611272f16b117
+Section: Tweaks
+Description: DYYY全面屏版
+Author: wangdaodao
+Name: DYYY全面屏版
+
+Package: com.wangdaodao.fakegps
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.fakegps_1.0.0_iphoneos-arm.deb
+Size: 34168
+MD5sum: d9d21dd53cbe27c1cc54ad6a4555013f
+SHA1: 5350b380e19660af666dc90ca6c8726c7d8764d4
+SHA256: 5aa2a01c6b1871403e37ae5cf0fbfedf1b7dead925efb9f71fa76bfc40f42f36
+Section: Tweaks
+Description: FakeGPS
+Author: wangdaodao
+Name: FakeGPS
+
+Package: com.wangdaodao.fuckwechatads
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.fuckwechatads_1.0.0_iphoneos-arm.deb
+Size: 16940
+MD5sum: 94d4c2e8145592b55981a4770b9cb199
+SHA1: 82cfb25cdd19c6b70a132bdf68eea3f3ff47255a
+SHA256: 7b662f5aa7daeda61144568aa135ef2db3bd9cafe24fcc027c1deb274891d80b
+Section: Tweaks
+Description: 微信去广告_FuckWeChatAds
+Author: wangdaodao
+Name: 微信去广告_FuckWeChatAds
+
+Package: com.wangdaodao.retake
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.retake_1.0.0_iphoneos-arm.deb
+Size: 76072
+MD5sum: 0b9b0748418dd5ff71106c6b669aa238
+SHA1: ddc0465b7d0b6e97e5e61d592d8a5ece90a1636e
+SHA256: c9de0222f1ac82716fd440064fec8e7bd4789a6c453078c34cf479fbee654292
+Section: Tweaks
+Description: Retake
+Author: wangdaodao
+Name: Retake
+
+Package: com.wangdaodao.satellajailed
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.satellajailed_1.0.0_iphoneos-arm.deb
+Size: 76272
+MD5sum: fe7da3bd0b416682cda9751d1ed53b76
+SHA1: 5b327ee7c80dce1c09f3a939f1f4bb7dbb20623e
+SHA256: 6d9ed636fa485ebf1fc702b110e2ec8777bd24918f450a99696e96ed2e666eec
+Section: Tweaks
+Description: SatellaJailed_内购破解
+Author: wangdaodao
+Name: SatellaJailed_内购破解
+
+Package: com.wangdaodao.smallboard
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.smallboard_1.0.0_iphoneos-arm.deb
+Size: 3724
+MD5sum: c713245a02f4edd066246e45981cd675
+SHA1: ba1c99099409c62967164afe80ac060fb0dde7a4
+SHA256: 4e44c4fbd2f07b4d067794bd889ce7f90a2bde5ec58e88f4d21aee619abc44c1
+Section: Tweaks
+Description: SmallBoard@降低键盘
+Author: wangdaodao
+Name: SmallBoard@降低键盘
+
+Package: com.wangdaodao.wbnoads
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.wbnoads_1.0.0_iphoneos-arm.deb
+Size: 3560
+MD5sum: 77559e339498723901286b9e5592d396
+SHA1: 4d28b9a8eaf541a2a4740f408c515262369c2a6c
+SHA256: bf49c9c2fb65e3f1a45e45eed3582cc7b3df7acb59f9a4e809058ce090ee1e3a
+Section: Tweaks
+Description: WBNoAds
+Author: wangdaodao
+Name: WBNoAds
+
+Package: com.wangdaodao.wcdisablehotupdates
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.wcdisablehotupdates_1.0.0_iphoneos-arm.deb
+Size: 2280
+MD5sum: 31d4e1537b4faec001fe41c9641749bd
+SHA1: aa376648fec6350faf62fcf6c6fc66a3dc551421
+SHA256: 0bd8fafc8f75667720f8a2c89e661d6f268cecd2e7530b9e3f1cf2debbfe7276
+Section: Tweaks
+Description: WCDisableHotUpdates
+Author: wangdaodao
+Name: WCDisableHotUpdates
+
+Package: com.wangdaodao.wcpureextension
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.wcpureextension_1.0.0_iphoneos-arm.deb
+Size: 6265928
+MD5sum: 90e3d6581291f0458f9fc1eb077dd3f0
+SHA1: e4c6aa7756b2cff3c88f98501c8b07e9f814ab1d
+SHA256: 11c8ffe9b970c7ffffc0e53203743d9fbde9a7601daf18e73a5c4a7885b49d71
+Section: Tweaks
+Description: WCPureExtension
+Author: wangdaodao
+Name: WCPureExtension
+
+Package: com.wangdaodao.xuu186
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: wangdaodao
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.xuu186_1.0.0_iphoneos-arm.deb
+Size: 6595576
+MD5sum: 0608f6a753fe31a17e6dadc2c7312404
+SHA1: 9483fd56871e3c065a0c5845345a42a07a432cd2
+SHA256: d6c224ea3d01e9275296950e521a3885024c405f40245e0e4a967416f73e7a98
+Section: Tweaks
+Description: 抖音助手（xuu）_1.8-6
+Author: wangdaodao
+Name: 抖音助手（xuu）_1.8-6
 
 Package: com.xx.xhshook
 Version: 1.1.6-5
