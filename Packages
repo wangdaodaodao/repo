@@ -1,0 +1,131 @@
+Package: com.den.igformat
+Version: 1.88-45+debug
+Architecture: iphoneos-arm64
+Maintainer: MrDeNsor
+Installed-Size: 1596
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/IGFormatV1.88-arm64.deb
+Size: 254048
+MD5sum: fb373a48fa90d74a7fadc810878f2c3d
+SHA1: 210db30b6511d08c63b1f205254b5c5269358ddf
+SHA256: 8de5f161f301fd4ab333c3daa0722121a44864e9435c20de417c4cde7982872e
+Section: Tweaks
+Description: Powerful Instagram Tweak
+Author: MrDeNsor
+Header: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo2.jpg
+Icon: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo.png
+Name: IGFormat
+Sileodepiction: https://raw.githubusercontent.com/6gr8/IGFormat/main/format.json
+
+Package: com.hw.jyxcz
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 1076
+Depends: mobilesubstrate
+Filename: debs/解压小橙子.deb
+Size: 219506
+MD5sum: 932eeb13973957ea2cf358847f7e5311
+SHA1: 6f3ff958ef01b3adffae70277ddd33ee853bf465
+SHA256: c878315631d92ad99173b7799c3093966b10f4b4fd450554356f12847990aed5
+Section: Tweaks
+Description: 解锁永久会员 - TG：@HelloWorld_1024
+Author: 🅷🆆
+Name: 🅷🆆 解压小橙子
+
+Package: com.hw.nomoraw
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 512
+Depends: mobilesubstrate
+Filename: debs/com.nomoraw_0.0.1.deb
+Size: 86216
+MD5sum: efbf0f881db00f0b947b8bffa7867042
+SHA1: dcaa525da8c8359adf3ee3aa5d5a7315a01cde49
+SHA256: 42da384fc133399c744422e15e1fe5bd2e203d6570e481e72346863af58d4fb6
+Section: Tweaks
+Description: 解锁专业版 - TG：@HelloWorld_1024
+Author: 🅷🆆
+Name: 🅷🆆 NOMO RAW
+
+Package: com.hw.peakwatch
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 1272
+Depends: mobilesubstrate
+Filename: debs/PeakWatch 2.deb
+Size: 256856
+MD5sum: 084d0e1fbf5e72977114155c9fb8e34e
+SHA1: 3aa4db76c77d980dbd7471f4da0338a490a72718
+SHA256: 34c1cbf2c6d0d961793f5bbd7f80b39495cad79ff2f4e2d2a335129649a0c931
+Section: Tweaks
+Description: 解锁VIP
+Author: 🅷🆆
+Name: 🅷🆆 PeakWatch
+
+Package: com.hw.peakwatch
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 1480
+Depends: mobilesubstrate
+Filename: debs/Peakwatch.deb
+Size: 295540
+MD5sum: 661e7eda7b360f34f44496f4a8f86f3f
+SHA1: cc54e1499993cc551e9366794cbb14b8d4713798
+SHA256: b52b498a3cbf0cae7947ce18e5bf332fae9eb139b71d9cf01e54c4e40b497ba3
+Section: Tweaks
+Description: 解锁VIP
+Author: 🅷🆆
+Name: 🅷🆆 PeakWatch
+
+Package: com.hw.stresswatch
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 1208
+Depends: mobilesubstrate
+Filename: debs/Stresswatch.deb
+Size: 246388
+MD5sum: 2bf227d72d3eedea2359b6bfa38e964e
+SHA1: 2433ff9935f71b3bebadad6a23c3eeb7e57e239c
+SHA256: 9698834983e214890bdd941f376cb44435fb59ee119b6c8853a326f91507da5d
+Section: Tweaks
+Description: 解锁永久Pro - Tg：@HelloWorld_1024
+Author: 🅷🆆
+Name: 🅷🆆 StressWatch
+
+Package: com.wangdaodao.due
+Version: 2.0.2-1+debug
+Architecture: iphoneos-arm
+Maintainer: 王导导
+Installed-Size: 220
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.wangdaodao.due.deb
+Size: 7448
+MD5sum: 8c1f9c69e5bc1e5495773650717d1b60
+SHA1: e51676af47bf0ee68bcd667ce1736144758af8a8
+SHA256: eca3bf9d12d97a2fb29f5718db55988f0bf30cf59e95ecaf233392457763d6d2
+Section: Tweaks
+Description: due 破解补丁
+Author: 王导导
+Name: due
+
+Package: com.xx.xhshook
+Version: 1.1.6-5
+Architecture: iphoneos-arm64
+Maintainer: x✨
+Installed-Size: 4312
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/xx.xhshook_1.1.6-5_arm64.deb
+Size: 1458920
+MD5sum: 14fbb639f6789df79555171ff1a24411
+SHA1: 0de3e37d93b525f5fd630c23bd1d5be71dc3ae72
+SHA256: 75a782872917ab5197989cd43ed5f745f95a80c7d7b67176edb2a309602a6e78
+Section: Tweaks
+Description: 自用
+Author: x✨
+Name: 小红薯
+
