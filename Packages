@@ -23,7 +23,7 @@ Architecture: iphoneos-arm64
 Maintainer: 🅷🆆
 Installed-Size: 1076
 Depends: mobilesubstrate
-Filename: debs/解压小橙子.deb
+Filename: debs/com.hw.jyxcz_0.0.1.deb
 Size: 219506
 MD5sum: 932eeb13973957ea2cf358847f7e5311
 SHA1: 6f3ff958ef01b3adffae70277ddd33ee853bf465
@@ -53,13 +53,13 @@ Package: com.hw.peakwatch
 Version: 0.0.1
 Architecture: iphoneos-arm64
 Maintainer: 🅷🆆
-Installed-Size: 1272
+Installed-Size: 1480
 Depends: mobilesubstrate
-Filename: debs/PeakWatch 2.deb
-Size: 256856
-MD5sum: 084d0e1fbf5e72977114155c9fb8e34e
-SHA1: 3aa4db76c77d980dbd7471f4da0338a490a72718
-SHA256: 34c1cbf2c6d0d961793f5bbd7f80b39495cad79ff2f4e2d2a335129649a0c931
+Filename: debs/com.hw.peakwatch_0.0.1.deb
+Size: 295540
+MD5sum: 661e7eda7b360f34f44496f4a8f86f3f
+SHA1: cc54e1499993cc551e9366794cbb14b8d4713798
+SHA256: b52b498a3cbf0cae7947ce18e5bf332fae9eb139b71d9cf01e54c4e40b497ba3
 Section: Tweaks
 Description: 解锁VIP
 Author: 🅷🆆
@@ -69,13 +69,13 @@ Package: com.hw.peakwatch
 Version: 0.0.1
 Architecture: iphoneos-arm64
 Maintainer: 🅷🆆
-Installed-Size: 1480
+Installed-Size: 1272
 Depends: mobilesubstrate
-Filename: debs/Peakwatch.deb
-Size: 295540
-MD5sum: 661e7eda7b360f34f44496f4a8f86f3f
-SHA1: cc54e1499993cc551e9366794cbb14b8d4713798
-SHA256: b52b498a3cbf0cae7947ce18e5bf332fae9eb139b71d9cf01e54c4e40b497ba3
+Filename: debs/com.hw.peakwatch2_0.0.1.deb
+Size: 256856
+MD5sum: 084d0e1fbf5e72977114155c9fb8e34e
+SHA1: 3aa4db76c77d980dbd7471f4da0338a490a72718
+SHA256: 34c1cbf2c6d0d961793f5bbd7f80b39495cad79ff2f4e2d2a335129649a0c931
 Section: Tweaks
 Description: 解锁VIP
 Author: 🅷🆆
@@ -87,7 +87,7 @@ Architecture: iphoneos-arm64
 Maintainer: 🅷🆆
 Installed-Size: 1208
 Depends: mobilesubstrate
-Filename: debs/Stresswatch.deb
+Filename: debs/com.hw.stresswatch_0.0.1.deb
 Size: 246388
 MD5sum: 2bf227d72d3eedea2359b6bfa38e964e
 SHA1: 2433ff9935f71b3bebadad6a23c3eeb7e57e239c
