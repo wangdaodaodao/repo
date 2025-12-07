@@ -1,0 +1,19 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "",
+  "tintColor": "",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "markdown": "This is a tweak package.",
+          "useMarkdown": false,
+          "class": "DepictionMarkdownView"
+        }
+      ],
+      "class": "DepictionStackView"
+    }
+  ],
+  "class": "DepictionTabView"
+}

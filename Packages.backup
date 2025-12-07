@@ -15,8 +15,6 @@ Author: MrDeNsor
 Header: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo2.jpg
 Icon: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo.png
 Name: IGFormat
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 Sileodepiction: https://raw.githubusercontent.com/6gr8/IGFormat/main/format.json
 
 Package: com.hw.jyxcz
@@ -36,8 +34,6 @@ Author: 🅷🆆
 Name: 🅷🆆 解压小橙子
 Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
 Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.hw.nomoraw
 Version: 0.0.1
@@ -54,8 +50,6 @@ Section: Tweaks
 Description: 解锁专业版 - TG：@HelloWorld_1024
 Author: 🅷🆆
 Name: 🅷🆆 NOMO RAW
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.hw.peakwatch
 Version: 0.0.1
@@ -72,8 +66,6 @@ Section: Tweaks
 Description: 解锁VIP
 Author: 🅷🆆
 Name: 🅷🆆 PeakWatch
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.hw.peakwatch
 Version: 0.0.1
@@ -90,8 +82,6 @@ Section: Tweaks
 Description: 解锁VIP
 Author: 🅷🆆
 Name: 🅷🆆 PeakWatch
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.hw.stresswatch
 Version: 0.0.1
@@ -108,8 +98,6 @@ Section: Tweaks
 Description: 解锁永久Pro - Tg：@HelloWorld_1024
 Author: 🅷🆆
 Name: 🅷🆆 StressWatch
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.104ios
 Version: 1.0.0
@@ -125,8 +113,6 @@ Section: Tweaks
 Description: 高德地图_1.0.4_iOS宝藏
 Author: wangdaodao
 Name: 高德地图_1.0.4_iOS宝藏
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.387
 Version: 1.0.0
@@ -142,8 +128,6 @@ Section: Tweaks
 Description: 微信助手_3.8-7
 Author: wangdaodao
 Name: 微信助手_3.8-7
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.due
 Version: 2.0.2-1+debug
@@ -160,8 +144,6 @@ Section: Tweaks
 Description: due 破解补丁
 Author: 王导导
 Name: due
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.dyyy
 Version: 1.0.0
@@ -177,8 +159,6 @@ Section: Tweaks
 Description: DYYY全面屏版
 Author: wangdaodao
 Name: DYYY全面屏版
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.fakegps
 Version: 1.0.0
@@ -194,8 +174,6 @@ Section: Tweaks
 Description: FakeGPS
 Author: wangdaodao
 Name: FakeGPS
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.fuckwechatads
 Version: 1.0.0
@@ -211,8 +189,6 @@ Section: Tweaks
 Description: 微信去广告_FuckWeChatAds
 Author: wangdaodao
 Name: 微信去广告_FuckWeChatAds
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.retake
 Version: 1.0.0
@@ -228,8 +204,6 @@ Section: Tweaks
 Description: Retake
 Author: wangdaodao
 Name: Retake
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.satellajailed
 Version: 1.0.0
@@ -245,8 +219,6 @@ Section: Tweaks
 Description: SatellaJailed_内购破解
 Author: wangdaodao
 Name: SatellaJailed_内购破解
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.smallboard
 Version: 1.0.0
@@ -262,8 +234,6 @@ Section: Tweaks
 Description: SmallBoard@降低键盘
 Author: wangdaodao
 Name: SmallBoard@降低键盘
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wbnoads
 Version: 1.0.0
@@ -279,8 +249,6 @@ Section: Tweaks
 Description: WBNoAds
 Author: wangdaodao
 Name: WBNoAds
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wcdisablehotupdates
 Version: 1.0.0
@@ -296,8 +264,6 @@ Section: Tweaks
 Description: WCDisableHotUpdates
 Author: wangdaodao
 Name: WCDisableHotUpdates
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wcpureextension
 Version: 1.0.0
@@ -313,8 +279,6 @@ Section: Tweaks
 Description: WCPureExtension
 Author: wangdaodao
 Name: WCPureExtension
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.xuu186
 Version: 1.0.0
@@ -330,8 +294,6 @@ Section: Tweaks
 Description: 抖音助手（xuu）_1.8-6
 Author: wangdaodao
 Name: 抖音助手（xuu）_1.8-6
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.xx.xhshook
 Version: 1.1.6-5
@@ -348,5 +310,3 @@ Section: Tweaks
 Description: 自用
 Author: x✨
 Name: 小红薯
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
