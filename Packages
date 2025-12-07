@@ -278,10 +278,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.xnfb1103_1.0.0_iphoneos-arm64.deb
-Size: 14785580
-MD5sum: aba790efa24e3c26b2879b8610880b8b
-SHA1: f992fc8989a2b743a33f77ee0f219335452d5280
-SHA256: 3314a21c43bf7af6f53c3049079ccd39a4a26630a93bcc60ceb9d6c3e24eb322
+Size: 8002756
+MD5sum: ae24eb675a281ccad842f26c83489a94
+SHA1: 5df3c2bfdada8a7c62c025ae520ec9b455150712
+SHA256: e47980931fe4011e08b88c4a44f202c31a6454efaf8d11db2928bf66dc39bb3c
 Section: Tweaks
 Description: X-NFB_1103_秋名山
 Author: wangdaodao

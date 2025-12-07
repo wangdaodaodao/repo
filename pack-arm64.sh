@@ -213,27 +213,57 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
         continue
     fi
 
-    # 查找解压后的 dylib 文件
-    EXTRACTED_DYLIB=$(find "$EXTRACT_DIR" -name "*.dylib" | head -1)
+    # 查找解压后的 dylib 文件（排除framework中的dylib）
+    EXTRACTED_DYLIB=$(find "$EXTRACT_DIR" -name "*.dylib" -not -path "*/framework/*" -not -path "*/Frameworks/*" | head -1)
     if [ -z "$EXTRACTED_DYLIB" ]; then
-        echo -e "  ${RED}❌ 未找到 dylib 文件${NC}"
+        echo -e "  ${RED}❌ 未找到主 dylib 文件${NC}"
         ((FAILED_COUNT++))
         FAILED_FILES+=("$FILENAME")
         rm -rf "$TEMP_DIR"
         continue
     fi
 
-    # 复制 dylib 文件
-    cp "$EXTRACTED_DYLIB" "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/"
+    # 复制所有文件到正确的越狱路径
+    echo "  复制文件到越狱路径..."
 
-    # 检查是否有现成的 plist 文件
-    EXTRACTED_PLIST=$(find "$EXTRACT_DIR" -name "*.plist" | head -1)
+    # 复制所有文件，保持目录结构
+    find "$EXTRACT_DIR" -type f | while read -r file; do
+        # 获取相对路径
+        REL_PATH="${file#$EXTRACT_DIR/}"
+
+        # 确定目标路径
+        if [[ "$REL_PATH" == *.dylib ]]; then
+            # dylib文件放到MobileSubstrate目录
+            TARGET_DIR="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
+            mkdir -p "$TARGET_DIR"
+            cp "$file" "$TARGET_DIR/"
+        elif [[ "$REL_PATH" == *.framework/* ]] || [[ "$REL_PATH" == Frameworks/* ]]; then
+            # framework文件放到Frameworks目录
+            TARGET_DIR="$TEMP_DIR/var/jb/Library/Frameworks/$(dirname "$REL_PATH")"
+            mkdir -p "$TARGET_DIR"
+            cp "$file" "$TARGET_DIR/"
+        elif [[ "$REL_PATH" == *.bundle/* ]]; then
+            # bundle文件放到PreferenceBundles目录
+            TARGET_DIR="$TEMP_DIR/var/jb/Library/PreferenceBundles/$(dirname "$REL_PATH")"
+            mkdir -p "$TARGET_DIR"
+            cp "$file" "$TARGET_DIR/"
+        else
+            # 其他文件放到MobileSubstrate目录
+            TARGET_DIR="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
+            mkdir -p "$TARGET_DIR"
+            cp "$file" "$TARGET_DIR/"
+        fi
+    done
+
+    # 删除解压目录，避免打包时包含不需要的文件
+    rm -rf "$EXTRACT_DIR"
+
+    # 查找主dylib文件
     DYLIB_NAME=$(basename "$EXTRACTED_DYLIB")
     PLIST_FILE="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
 
-    if [ -n "$EXTRACTED_PLIST" ]; then
-        # 使用现有的 plist 文件
-        cp "$EXTRACTED_PLIST" "$PLIST_FILE"
+    # 检查plist文件是否存在
+    if [ -f "$PLIST_FILE" ]; then
         echo "  使用现有 plist 文件"
     else
         # 创建新的 plist 文件
