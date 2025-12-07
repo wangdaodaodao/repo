@@ -26,7 +26,7 @@ fi
 
 # 生成 Packages 文件
 echo "📦 生成 Packages 文件..."
-dpkg-scanpackages -m debs /dev/null > Packages 2>/dev/null
+dpkg-scanpackages -m debs /dev/null | sed 's|Filename: /Users/wangdaodao/编程/repo/|Filename: |g' > Packages 2>/dev/null
 
 if [ $? -eq 0 ]; then
     echo "✅ Packages 文件生成成功"
