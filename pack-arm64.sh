@@ -93,14 +93,14 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
     TEMP_DIR="temp_${PACKAGE_ID}"
     rm -rf "$TEMP_DIR"
     mkdir -p "$TEMP_DIR/DEBIAN"
-    mkdir -p "$TEMP_DIR/Library/MobileSubstrate/DynamicLibraries"
+    mkdir -p "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
 
     # 复制 dylib 文件
-    cp "$DYLIB_FILE" "$TEMP_DIR/Library/MobileSubstrate/DynamicLibraries/"
+    cp "$DYLIB_FILE" "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/"
 
     # 创建 plist 文件
     DYLIB_NAME=$(basename "$DYLIB_FILE")
-    PLIST_FILE="$TEMP_DIR/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
+    PLIST_FILE="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
 
     cat > "$PLIST_FILE" << EOF
 <?xml version="1.0" encoding="UTF-8"?>

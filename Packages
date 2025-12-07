@@ -15,8 +15,6 @@ Author: MrDeNsor
 Header: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo2.jpg
 Icon: https://github.com/6gr8/IGFormat/raw/main/IGFormatLogo.png
 Name: IGFormat
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 Sileodepiction: https://raw.githubusercontent.com/6gr8/IGFormat/main/format.json
 
 Package: com.wangdaodao.
@@ -25,18 +23,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao._1.0.0_iphoneos-arm64.deb
-Size: 5508
-MD5sum: f4b61cce6302834566adf1946bf86ad4
-SHA1: ae13b1179d0004f00daeab5f6acf19dcf1df29c0
-SHA256: 57c14319ab0e53c3ad55b5935d38e913e2344549326806b9b71ef0e6cc786b47
+Size: 5532
+MD5sum: 86786d7f854bd4e4609cc9406e458fda
+SHA1: aa18a465c952229cd1cf83fa81339e6e6de19b26
+SHA256: 2577f760dcd86fde2d1a435fe0d3978da5f2b1fc4cc147710c499b49dfc3c41b
 Section: Tweaks
 Description: 微信朋友圈尾巴自定义
 Author: wangdaodao
 Name: 微信朋友圈尾巴自定义
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.104ios
 Version: 1.0.0
@@ -44,16 +38,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.104ios_1.0.0_iphoneos-arm64.deb
-Size: 357748
-MD5sum: 55f4c3c3f5cc688fdd614c044afa074c
-SHA1: 066f2d5ec3e7fa623d2346c4e47b630c96298284
-SHA256: 228a3d4f1a90370dc5518dedba857733b506a86df7372f1c17fb45f449620281
+Size: 357768
+MD5sum: 34e60c8cc05314e6ed3ed7e64b7788c6
+SHA1: 3b39775b1390025e50a0a9d672eaa7223d30ccd2
+SHA256: dd0998dc8f033a2fa9ab3a19a9d9750b8ba0596ea9bbea7bc20fa6b48adc79b6
 Section: Tweaks
 Description: 高德地图_1.0.4_iOS宝藏
 Author: wangdaodao
 Name: 高德地图_1.0.4_iOS宝藏
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.387
 Version: 1.0.0
@@ -61,16 +53,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.387_1.0.0_iphoneos-arm64.deb
-Size: 6231996
-MD5sum: bb167b0f0e71927387d2a39218548efc
-SHA1: 0d5d601c7d3fcba117b6eec68fff05b632e7cacd
-SHA256: bea782011ce0790255682481618150cc962278832ce3f3e360056a94c8806f2d
+Size: 6232004
+MD5sum: 7cb59d47ee21c70cf450741a60fe8d6b
+SHA1: 3409b018a4a0bbbd6527cac2455419b308e9bece
+SHA256: 6516af4f1b565f9ba291c974e0a651206752f090883c757d35fb6caba425ced4
 Section: Tweaks
 Description: 微信助手_3.8-7
 Author: wangdaodao
 Name: 微信助手_3.8-7
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.dyyy
 Version: 1.0.0
@@ -78,16 +68,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.dyyy_1.0.0_iphoneos-arm64.deb
-Size: 393740
-MD5sum: bb9bcb320ca1857331e269ff4ec7df65
-SHA1: a301f12db681ec54a8446e7257d4a3e1867e28f9
-SHA256: c356bc631884b1115cded36b81be9d9c424673ecddd6f27d8869edb4f9717218
+Size: 393656
+MD5sum: 6c6f991b220eed03cd80f0ccaa9a7697
+SHA1: d03269ae1bdfec0d45082267aa65624fd246a1e4
+SHA256: f7a9a108400bede5983be8bdb2e5617b5a1d51a086b79830da47bb2be6137d4b
 Section: Tweaks
 Description: DYYY全面屏版
 Author: wangdaodao
 Name: DYYY全面屏版
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.fakegps
 Version: 1.0.0
@@ -95,16 +83,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.fakegps_1.0.0_iphoneos-arm64.deb
-Size: 34124
-MD5sum: 0ccd2a7ce595ce28c91880406c9646dc
-SHA1: 514200d7a8fd734db376452f74d7bb9ca7812ac4
-SHA256: d05c6a6bcffc27fa2ae7c233d2d28eecdb47dfbdc3617cd19fb680fa91fc5ec1
+Size: 34228
+MD5sum: 59874571f1bb7e1945d8b69e31ec21d2
+SHA1: 70bf740dff63bc04a60e7acd77eb62c173cff66f
+SHA256: 1dd53bc53a7092dbea8bb931e87ac6ce415cd37e6c30d2e3192c06bc82f91bac
 Section: Tweaks
 Description: FakeGPS
 Author: wangdaodao
 Name: FakeGPS
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.fuckwechatads
 Version: 1.0.0
@@ -112,16 +98,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.fuckwechatads_1.0.0_iphoneos-arm64.deb
-Size: 16924
-MD5sum: ec8404e4ea5e191ccb5f2b1d53c1b808
-SHA1: d8fdd9e391a1e0bcc226f5800865e3b0b2112f3a
-SHA256: e36bbde15a4308687b9a773c1776e8857f9491c54b62524ffcb9d0aa32f784dd
+Size: 16956
+MD5sum: 5b5c263b68e16375fa165a6f730bdaaa
+SHA1: ffcadad27983c56f0735c6d9ff4ae67419db0f87
+SHA256: 8c8323d21831662bb6d02413e3183fb1057eb91caa12e752e0ca0736b1ab82e3
 Section: Tweaks
 Description: 微信去广告_FuckWeChatAds
 Author: wangdaodao
 Name: 微信去广告_FuckWeChatAds
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.retake
 Version: 1.0.0
@@ -129,16 +113,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.retake_1.0.0_iphoneos-arm64.deb
-Size: 76008
-MD5sum: 638925b68024910dcd441532a6c7520e
-SHA1: 66a1d5ea1cded4169f2e3a3a7b6bd23ee7c6f6ea
-SHA256: 1786e65c8ec084a960b45fee4220e243896d1aa02517b3a1b1376a52967a4012
+Size: 75996
+MD5sum: a25148f5db576a779b99ff9c0a8d9066
+SHA1: 63aa2da5bfd2e294dd4c59a8685068a5151e112b
+SHA256: 25b07a19344d66abba511b711b66300ce7b7d83a2a8fe106a88838fcb60d55b1
 Section: Tweaks
 Description: Retake
 Author: wangdaodao
 Name: Retake
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.satellajailed
 Version: 1.0.0
@@ -146,16 +128,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.satellajailed_1.0.0_iphoneos-arm64.deb
-Size: 76192
-MD5sum: 2aef28bc32476741aa8ea2e19b49cc3e
-SHA1: f85b7d2118a9cf146cd9d913835477baebcf092f
-SHA256: 5284a07acb1ee5c913a678ce7fe453a29661f1b3b4084ba521f3b02eb540e9d9
+Size: 76064
+MD5sum: d9cf96577b320a8d8527f87648be7552
+SHA1: 63371cbb326272bb00c418736b93595f440be2ba
+SHA256: 7403415cbb9f19c3463d06f01a674bef8f61115f1edcb59af52e890a5ad5efdf
 Section: Tweaks
 Description: SatellaJailed_内购破解
 Author: wangdaodao
 Name: SatellaJailed_内购破解
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.smallboard
 Version: 1.0.0
@@ -163,16 +143,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.smallboard_1.0.0_iphoneos-arm64.deb
-Size: 3724
-MD5sum: 908f202bca28c382c2b26ee24268682e
-SHA1: 1eb4b393ffc619b40f2d74da50ee24e932666984
-SHA256: 43aa059f07ffc092f07904ae4ac0b47988f6d3ef3f4cb5f2ceca527505eaf1bf
+Size: 3744
+MD5sum: c9e87cf4f3ec9a37299762d3f4ac29c3
+SHA1: fd8e6790e2f30066840bb686b1f6891f298c5500
+SHA256: e86efc2e3fb79c1de7658a7cbc5ca66de48fd1e4a7ee68dc1c9dd87b38598b49
 Section: Tweaks
 Description: SmallBoard@降低键盘
 Author: wangdaodao
 Name: SmallBoard@降低键盘
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wbnoads
 Version: 1.0.0
@@ -180,16 +158,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.wbnoads_1.0.0_iphoneos-arm64.deb
-Size: 3560
-MD5sum: a9709be224602d9b572313b1649702ec
-SHA1: 1c596fc178a3319bdfcc32afca3557c1034507c1
-SHA256: c2da1bfa485bf8dc228a12511179e50d56c09cd4bebbea8d2d83c5dc30141389
+Size: 3576
+MD5sum: 670baa59bf9f4b0f1b63c50523717afb
+SHA1: 8a725371a6032ffba75b2fdb0a7b714218ae7c41
+SHA256: 1ea42766bbbbd2717ada932f84efd7016b0f8dfdf0fc8ebaee42ad4f59dd73cc
 Section: Tweaks
 Description: WBNoAds
 Author: wangdaodao
 Name: WBNoAds
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wcdisablehotupdates
 Version: 1.0.0
@@ -197,16 +173,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.wcdisablehotupdates_1.0.0_iphoneos-arm64.deb
-Size: 2276
-MD5sum: 4aa69e39e0baecf764b31313658414c3
-SHA1: 604a47fd979d5d95a0c81452e255a610ef697252
-SHA256: e4717480f4ba51776e580127fd48a527115e16e991495755bef1809216d6d153
+Size: 2300
+MD5sum: 15bbe486852ef600fab2d4021dc8ee66
+SHA1: 0d3d5df5504d964f0a4b230878e33c303b0b285f
+SHA256: 6e53e801281ee742282a1822eba462454f1784dc0d404e52bf410a61206a0ac5
 Section: Tweaks
 Description: WCDisableHotUpdates
 Author: wangdaodao
 Name: WCDisableHotUpdates
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.wangdaodao.wcpureextension
 Version: 1.0.0
@@ -214,16 +188,14 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.wcpureextension_1.0.0_iphoneos-arm64.deb
-Size: 6276008
-MD5sum: 7c807c83dbaf0f956970d847c045ef79
-SHA1: 0c17779b2089178a379a68d7e25340cb8748bb29
-SHA256: de53fd604dd83347430511954c8497adf69f8ace138ee7c55902bf7bbbfd328d
+Size: 6273092
+MD5sum: 243d8a80b311192cef63c26c172bc708
+SHA1: 3dfd533a0b3797cade4584fa522c2fd1c7e8f890
+SHA256: e980265324bba1d18b81be7925064716918e3ec855cd56ee5e5a1fffa9b0459b
 Section: Tweaks
 Description: WCPureExtension
 Author: wangdaodao
 Name: WCPureExtension
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
 
 Package: com.xx.xhshook
 Version: 1.1.6-5
@@ -240,5 +212,4 @@ Section: Tweaks
 Description: 自用
 Author: x✨
 Name: 小红薯
-Icon: https://raw.githubusercontent.com/wangdaodaodao/repo/main/icon.png
-Sileodepiction: https://raw.githubusercontent.com/wangdaodaodao/repo/main/depiction.json
+
