@@ -26,21 +26,25 @@ fi
 
 DYLIB_DIR="$1"
 
-# 查找所有 .dylib 文件
+# 查找所有 .dylib 和 .zip 文件
 DYLIB_FILES=("$DYLIB_DIR"/*.dylib)
+ZIP_FILES=("$DYLIB_DIR"/*.zip)
 
-if [ ! -e "${DYLIB_FILES[0]}" ]; then
-    echo -e "${YELLOW}⚠️  未找到 .dylib 文件在 $DYLIB_DIR${NC}"
+# 合并所有文件
+ALL_FILES=("${DYLIB_FILES[@]}" "${ZIP_FILES[@]}")
+
+if [ ! -e "${DYLIB_FILES[0]}" ] && [ ! -e "${ZIP_FILES[0]}" ]; then
+    echo -e "${YELLOW}⚠️  未找到 .dylib 或 .zip 文件在 $DYLIB_DIR${NC}"
     exit 0
 fi
 
-TOTAL_FILES=${#DYLIB_FILES[@]}
-echo -e "${GREEN}📦 找到 $TOTAL_FILES 个 .dylib 文件${NC}"
+TOTAL_FILES=${#ALL_FILES[@]}
+echo -e "${GREEN}📦 找到 $TOTAL_FILES 个文件 (.dylib 和 .zip)${NC}"
 echo ""
 
 # 显示文件列表
-for i in "${!DYLIB_FILES[@]}"; do
-    echo "  $((i+1)). $(basename "${DYLIB_FILES[$i]}")"
+for i in "${!ALL_FILES[@]}"; do
+    echo "  $((i+1)). $(basename "${ALL_FILES[$i]}")"
 done
 
 echo ""
@@ -62,8 +66,11 @@ SUCCESS_COUNT=0
 FAILED_COUNT=0
 FAILED_FILES=()
 
-# 处理每个文件
+# 处理 dylib 文件
 for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
+    if [ ! -f "$DYLIB_FILE" ]; then
+        continue
+    fi
     FILENAME=$(basename "$DYLIB_FILE" .dylib)
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e "${BLUE}📦 处理: $FILENAME${NC}"
@@ -117,6 +124,136 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
 </dict>
 </plist>
 EOF
+
+    # 创建 control 文件 (arm64架构)
+    cat > "$TEMP_DIR/DEBIAN/control" << EOF
+Package: ${PACKAGE_ID}
+Name: ${PACKAGE_NAME}
+Version: ${DEFAULT_VERSION}
+Architecture: iphoneos-arm64
+Description: ${PACKAGE_NAME}
+Maintainer: ${DEFAULT_AUTHOR}
+Author: ${DEFAULT_AUTHOR}
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+EOF
+
+    # 打包
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
+    OUTPUT_PATH="debs/${DEB_NAME}"
+
+    if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
+        echo -e "  ${GREEN}✅ 成功: $DEB_NAME${NC}"
+        ((SUCCESS_COUNT++))
+    else
+        echo -e "  ${RED}❌ 失败${NC}"
+        ((FAILED_COUNT++))
+        FAILED_FILES+=("$FILENAME")
+    fi
+
+    # 清理
+    rm -rf "$TEMP_DIR"
+done
+
+# 处理 zip 文件
+for ZIP_FILE in "${ZIP_FILES[@]}"; do
+    if [ ! -f "$ZIP_FILE" ]; then
+        continue
+    fi
+
+    FILENAME=$(basename "$ZIP_FILE" .zip)
+    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${BLUE}📦 处理 ZIP: $FILENAME${NC}"
+
+    # 根据文件名智能推断包信息
+    PACKAGE_ID="com.${DEFAULT_AUTHOR}.$(echo "$FILENAME" | sed 's/[^a-zA-Z0-9]//g' | tr '[:upper:]' '[:lower:]')"
+    PACKAGE_NAME="$FILENAME"
+
+    # 智能推断目标应用
+    BUNDLE_ID="com.apple.springboard"
+    if [[ "$FILENAME" =~ "微信" ]] || [[ "$FILENAME" =~ "WeChat" ]]; then
+        BUNDLE_ID="com.tencent.xin"
+    elif [[ "$FILENAME" =~ "抖音" ]] || [[ "$FILENAME" =~ "TikTok" ]]; then
+        BUNDLE_ID="com.ss.iphone.ugc.Aweme"
+    elif [[ "$FILENAME" =~ "小红书" ]] || [[ "$FILENAME" =~ "xhs" ]]; then
+        BUNDLE_ID="com.xingin.xhs"
+    elif [[ "$FILENAME" =~ "微博" ]] || [[ "$FILENAME" =~ "Weibo" ]]; then
+        BUNDLE_ID="com.sina.weibo"
+    elif [[ "$FILENAME" =~ "高德" ]]; then
+        BUNDLE_ID="com.autonavi.amap"
+    elif [[ "$FILENAME" =~ "Spotify" ]] || [[ "$FILENAME" =~ "Eevee" ]]; then
+        BUNDLE_ID="com.spotify.client"
+    elif [[ "$FILENAME" =~ "YouTube" ]] || [[ "$FILENAME" =~ "YT" ]]; then
+        BUNDLE_ID="com.google.ios.youtube"
+    elif [[ "$FILENAME" =~ "Reddit" ]] || [[ "$FILENAME" =~ "reddit" ]]; then
+        BUNDLE_ID="com.reddit.Reddit"
+    elif [[ "$FILENAME" =~ "FLEX" ]]; then
+        BUNDLE_ID="com.apple.springboard"
+    fi
+
+    echo "  Package ID: $PACKAGE_ID"
+    echo "  Bundle ID: $BUNDLE_ID"
+
+    # 创建临时目录
+    TEMP_DIR="temp_${PACKAGE_ID}"
+    rm -rf "$TEMP_DIR"
+    mkdir -p "$TEMP_DIR/DEBIAN"
+    mkdir -p "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
+
+    # 解压 zip 文件
+    EXTRACT_DIR="$TEMP_DIR/extract"
+    mkdir -p "$EXTRACT_DIR"
+    if unzip -q "$ZIP_FILE" -d "$EXTRACT_DIR"; then
+        echo "  解压成功"
+    else
+        echo -e "  ${RED}❌ 解压失败${NC}"
+        ((FAILED_COUNT++))
+        FAILED_FILES+=("$FILENAME")
+        rm -rf "$TEMP_DIR"
+        continue
+    fi
+
+    # 查找解压后的 dylib 文件
+    EXTRACTED_DYLIB=$(find "$EXTRACT_DIR" -name "*.dylib" | head -1)
+    if [ -z "$EXTRACTED_DYLIB" ]; then
+        echo -e "  ${RED}❌ 未找到 dylib 文件${NC}"
+        ((FAILED_COUNT++))
+        FAILED_FILES+=("$FILENAME")
+        rm -rf "$TEMP_DIR"
+        continue
+    fi
+
+    # 复制 dylib 文件
+    cp "$EXTRACTED_DYLIB" "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/"
+
+    # 检查是否有现成的 plist 文件
+    EXTRACTED_PLIST=$(find "$EXTRACT_DIR" -name "*.plist" | head -1)
+    DYLIB_NAME=$(basename "$EXTRACTED_DYLIB")
+    PLIST_FILE="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
+
+    if [ -n "$EXTRACTED_PLIST" ]; then
+        # 使用现有的 plist 文件
+        cp "$EXTRACTED_PLIST" "$PLIST_FILE"
+        echo "  使用现有 plist 文件"
+    else
+        # 创建新的 plist 文件
+        cat > "$PLIST_FILE" << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Filter</key>
+    <dict>
+        <key>Bundles</key>
+        <array>
+            <string>${BUNDLE_ID}</string>
+        </array>
+    </dict>
+</dict>
+</plist>
+EOF
+        echo "  创建新的 plist 文件"
+    fi
 
     # 创建 control 文件 (arm64架构)
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
