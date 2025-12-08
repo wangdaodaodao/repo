@@ -143,7 +143,7 @@ EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -152,7 +152,7 @@ Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
@@ -355,7 +355,7 @@ EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -364,7 +364,7 @@ Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
