@@ -143,7 +143,7 @@ EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -151,22 +151,8 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
-    # 创建 postinst 脚本（安装后重启 SpringBoard）
-    cat > "$TEMP_DIR/DEBIAN/postinst" << 'POSTINST_EOF'
-#!/bin/bash
-if [[ -f /var/jb/usr/bin/sbreload ]]; then
-    /var/jb/usr/bin/sbreload
-elif [[ -f /usr/bin/sbreload ]]; then
-    /usr/bin/sbreload
-else
-    killall -9 SpringBoard 2>/dev/null || true
-fi
-exit 0
-POSTINST_EOF
-    chmod 755 "$TEMP_DIR/DEBIAN/postinst"
-
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64e.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
@@ -369,7 +355,7 @@ EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -377,22 +363,8 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
-    # 创建 postinst 脚本（安装后重启 SpringBoard）
-    cat > "$TEMP_DIR/DEBIAN/postinst" << 'POSTINST_EOF'
-#!/bin/bash
-if [[ -f /var/jb/usr/bin/sbreload ]]; then
-    /var/jb/usr/bin/sbreload
-elif [[ -f /usr/bin/sbreload ]]; then
-    /usr/bin/sbreload
-else
-    killall -9 SpringBoard 2>/dev/null || true
-fi
-exit 0
-POSTINST_EOF
-    chmod 755 "$TEMP_DIR/DEBIAN/postinst"
-
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64e.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
