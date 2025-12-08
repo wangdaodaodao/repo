@@ -1,13 +1,29 @@
+Package: com.hw.nomoraw
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🅷🆆
+Installed-Size: 512
+Depends: mobilesubstrate
+Filename: debs/com.nomoraw_0.0.1.deb
+Size: 86216
+MD5sum: efbf0f881db00f0b947b8bffa7867042
+SHA1: dcaa525da8c8359adf3ee3aa5d5a7315a01cde49
+SHA256: 42da384fc133399c744422e15e1fe5bd2e203d6570e481e72346863af58d4fb6
+Section: Tweaks
+Description: 解锁专业版 - TG：@HelloWorld_1024
+Author: 🅷🆆
+Name: 🅷🆆 NOMO RAW
+
 Package: com.wangdaodao.0914xtrollfools
 Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.0914xtrollfools_1.0.0_iphoneos-arm.deb
-Size: 7517424
-MD5sum: 5ec2039a9b88093acb162a39bd98a7f1
-SHA1: b80c7edd7a12b5821b6a9f58cd01c3c79ca7ee38
-SHA256: 8c55dfa94ecfe8a179a688730ec99e999de157d31daeb8a2fee39f25d0c9eda8
+Size: 7519608
+MD5sum: 72550418b41b9b7d3b9d6979d660ee23
+SHA1: e9716f1a697f7037630949f081e8ad90f5d05219
+SHA256: 9066daac3cfe42f468b1deeae481d9b5883db76e2d4091ad159acb4dc24b421a
 Section: Tweaks
 Description: 「09.14」X_TrollFools
 Author: wangdaodao
@@ -19,10 +35,10 @@ Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.eeveespotify622trollfools_1.0.0_iphoneos-arm.deb
-Size: 1971880
-MD5sum: 31fa57d383178745efc7ee7298bb8aca
-SHA1: cf43493988f16574f5af8af4e5303eff604e5d29
-SHA256: f794ce5f222e4fac92227102d303f44848de4f8b09fc545d76a80bf17a1a2ac0
+Size: 1973676
+MD5sum: 5b56258d3e4bf35edf9df3c362e23bab
+SHA1: 63e04c62f22141bb32e50c3b4261a5bafe98d2a2
+SHA256: 21f5e2c998f9479a47d67a696feda4daae667dd249ae2e94573185ce7092acf1
 Section: Tweaks
 Description: EeveeSpotify_6.2.2_TrollFools
 Author: wangdaodao
@@ -34,10 +50,10 @@ Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.fakegps_1.0.0_iphoneos-arm.deb
-Size: 34116
-MD5sum: 7c3a76470a7afd77d05619acbaab9ae2
-SHA1: 312dd22c0804c667b406dc985dbe830f148e86f6
-SHA256: 2171a1a41f9e9338ea68e5426608e7b2f53e0d369ed59c7e65eb4f8388cdaf30
+Size: 34264
+MD5sum: 32c8afbcac8800877966522d6b090f83
+SHA1: 95d1517e110fffe27aa4bcca047bf6dec8f87d94
+SHA256: 0e64a4b97d5061b21f8ba1b31c48bff470a3c539c9fab95caf844fcffffe5d7c
 Section: Tweaks
 Description: FakeGPS
 Author: wangdaodao
@@ -50,9 +66,9 @@ Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.smallboard_1.0.0_iphoneos-arm.deb
 Size: 3744
-MD5sum: ee77da390ce48c71bfb7e331435d9589
-SHA1: 375a13b87fada4a3132b0f7ada10d061c26d359e
-SHA256: cd8c260f36f794d5f1588178d8d01d999c4909d6a14e9076e5da7b49e602f90a
+MD5sum: c6ade44f0e8f546536c23b76bb10305e
+SHA1: 63db46eac58077cdce5539a23c07382d5c91973d
+SHA256: ec5419b8021242b15f037d67d2a6045e8ffea73c8c8749f826da3fe603a4498c
 Section: Tweaks
 Description: SmallBoard@降低键盘
 Author: wangdaodao
@@ -64,10 +80,10 @@ Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.tiktokbh193_1.0.0_iphoneos-arm.deb
-Size: 834340
-MD5sum: cfba112cbdd83595334b81e7a3f23967
-SHA1: e17a20fcc74c7bdd6b0fb9bef149e7415fa9c0a5
-SHA256: 5980c94b3e55999b287519116f3dfb8658a55869e4ca86694fda3a547bd18725
+Size: 831544
+MD5sum: 5001847aed6e9086c2f1d5f939d06c44
+SHA1: a9d8f4b7e1d23ad57c93667029f533b1cf920b08
+SHA256: 40345f176d0918d466796ccdfe7772029cd84ab53cea42639929545261b0bc17
 Section: Tweaks
 Description: TikTok_BH++1.9.3_秋名山
 Author: wangdaodao
@@ -79,10 +95,10 @@ Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.xnfb1103_1.0.0_iphoneos-arm.deb
-Size: 7993348
-MD5sum: 434beeb78579e239620e2bf1b8e1d019
-SHA1: 7363ce28af6b39d17b4cf093879916180a5f6286
-SHA256: 1103902a1c9228f265129bab4a2d31fc1b078d12fd7db091b712ef028f1865e6
+Size: 7994788
+MD5sum: c03d440cbfaec70747904f56a23fd2de
+SHA1: f57747698627ae54cb06fc9e53013e4a6fd8b806
+SHA256: 00a58fcee2a0a3beee83d64c37d9d4eb2fdc196cb91824ab9ccfac04ecbb25d9
 Section: Tweaks
 Description: X-NFB_1103_秋名山
 Author: wangdaodao
@@ -94,12 +110,28 @@ Architecture: iphoneos-arm
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.ytplus0812_1.0.0_iphoneos-arm.deb
-Size: 6463468
-MD5sum: e4c23a6bec8cdedef438b84275987535
-SHA1: 00d28e678a69afdad23711ff4217ecc265cbec64
-SHA256: 3b99126a5bdf15f32c274717d098f30af29a8c3ffcddf33cdbaedd032c12b116
+Size: 6461544
+MD5sum: 26475384a00c44350149ae2c02779341
+SHA1: a63787970abb97b2e91414ce3c07ea1d9b75909f
+SHA256: f397d85b4e0756bf740a5b3044697d9b7c54e96590a8db5754e13905a80fa718
 Section: Tweaks
 Description: YTPlus_0812_秋名山
 Author: wangdaodao
 Name: YTPlus_0812_秋名山
+
+Package: com.xx.xhshook
+Version: 1.1.6-5
+Architecture: iphoneos-arm64
+Maintainer: x✨
+Installed-Size: 4312
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/xx.xhshook_1.1.6-5_arm64.deb
+Size: 1458920
+MD5sum: 14fbb639f6789df79555171ff1a24411
+SHA1: 0de3e37d93b525f5fd630c23bd1d5be71dc3ae72
+SHA256: 75a782872917ab5197989cd43ed5f745f95a80c7d7b67176edb2a309602a6e78
+Section: Tweaks
+Description: 自用
+Author: x✨
+Name: 小红薯
 
