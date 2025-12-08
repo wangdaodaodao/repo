@@ -83,12 +83,24 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
     BUNDLE_ID="com.apple.springboard"
     if [[ "$FILENAME" =~ "微信" ]] || [[ "$FILENAME" =~ "WeChat" ]]; then
         BUNDLE_ID="com.tencent.xin"
-    elif [[ "$FILENAME" =~ "抖音" ]] || [[ "$FILENAME" =~ "TikTok" ]]; then
+    elif [[ "$FILENAME" =~ "抖音" ]] || [[ "$FILENAME" =~ "TikTok" ]] || [[ "$FILENAME" =~ "Aweme" ]]; then
         BUNDLE_ID="com.ss.iphone.ugc.Aweme"
+    elif [[ "$FILENAME" =~ "抖音极速" ]] || [[ "$FILENAME" =~ "TikTokLite" ]]; then
+        BUNDLE_ID="com.ss.iphone.ugc.aweme.lite"
     elif [[ "$FILENAME" =~ "小红书" ]] || [[ "$FILENAME" =~ "xhs" ]]; then
         BUNDLE_ID="com.xingin.xhs"
     elif [[ "$FILENAME" =~ "微博" ]] || [[ "$FILENAME" =~ "Weibo" ]]; then
         BUNDLE_ID="com.sina.weibo"
+    elif [[ "$FILENAME" =~ "Twitter" ]] || [[ "$FILENAME" =~ "推特" ]] || [[ "$FILENAME" =~ "X" ]]; then
+        BUNDLE_ID="com.atebits.Tweetie2"
+    elif [[ "$FILENAME" =~ "Instagram" ]] || [[ "$FILENAME" =~ "ins" ]] || [[ "$FILENAME" =~ "Ins" ]]; then
+        BUNDLE_ID="com.burbn.instagram"
+    elif [[ "$FILENAME" =~ "YouTube" ]] || [[ "$FILENAME" =~ "YT" ]]; then
+        BUNDLE_ID="com.google.ios.youtube"
+    elif [[ "$FILENAME" =~ "Spotify" ]] || [[ "$FILENAME" =~ "Eevee" ]]; then
+        BUNDLE_ID="com.spotify.client"
+    elif [[ "$FILENAME" =~ "Due" ]]; then
+        BUNDLE_ID="com.phocusllp.due"
     elif [[ "$FILENAME" =~ "高德" ]]; then
         BUNDLE_ID="com.autonavi.amap"
     fi
@@ -188,20 +200,28 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
     BUNDLE_ID="com.apple.springboard"
     if [[ "$FILENAME" =~ "微信" ]] || [[ "$FILENAME" =~ "WeChat" ]]; then
         BUNDLE_ID="com.tencent.xin"
-    elif [[ "$FILENAME" =~ "抖音" ]] || [[ "$FILENAME" =~ "TikTok" ]]; then
+    elif [[ "$FILENAME" =~ "抖音" ]] || [[ "$FILENAME" =~ "TikTok" ]] || [[ "$FILENAME" =~ "Aweme" ]]; then
         BUNDLE_ID="com.ss.iphone.ugc.Aweme"
+    elif [[ "$FILENAME" =~ "抖音极速" ]] || [[ "$FILENAME" =~ "TikTokLite" ]]; then
+        BUNDLE_ID="com.ss.iphone.ugc.aweme.lite"
     elif [[ "$FILENAME" =~ "小红书" ]] || [[ "$FILENAME" =~ "xhs" ]]; then
         BUNDLE_ID="com.xingin.xhs"
     elif [[ "$FILENAME" =~ "微博" ]] || [[ "$FILENAME" =~ "Weibo" ]]; then
         BUNDLE_ID="com.sina.weibo"
-    elif [[ "$FILENAME" =~ "高德" ]]; then
-        BUNDLE_ID="com.autonavi.amap"
-    elif [[ "$FILENAME" =~ "Spotify" ]] || [[ "$FILENAME" =~ "Eevee" ]]; then
-        BUNDLE_ID="com.spotify.client"
+    elif [[ "$FILENAME" =~ "Twitter" ]] || [[ "$FILENAME" =~ "推特" ]] || [[ "$FILENAME" =~ "X" ]]; then
+        BUNDLE_ID="com.atebits.Tweetie2"
+    elif [[ "$FILENAME" =~ "Instagram" ]] || [[ "$FILENAME" =~ "ins" ]] || [[ "$FILENAME" =~ "Ins" ]]; then
+        BUNDLE_ID="com.burbn.instagram"
     elif [[ "$FILENAME" =~ "YouTube" ]] || [[ "$FILENAME" =~ "YT" ]]; then
         BUNDLE_ID="com.google.ios.youtube"
+    elif [[ "$FILENAME" =~ "Spotify" ]] || [[ "$FILENAME" =~ "Eevee" ]]; then
+        BUNDLE_ID="com.spotify.client"
+    elif [[ "$FILENAME" =~ "Due" ]]; then
+        BUNDLE_ID="com.phocusllp.due"
     elif [[ "$FILENAME" =~ "Reddit" ]] || [[ "$FILENAME" =~ "reddit" ]]; then
         BUNDLE_ID="com.reddit.Reddit"
+    elif [[ "$FILENAME" =~ "高德" ]]; then
+        BUNDLE_ID="com.autonavi.amap"
     elif [[ "$FILENAME" =~ "FLEX" ]]; then
         BUNDLE_ID="com.apple.springboard"
     fi
