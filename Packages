@@ -4,10 +4,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.0914xtrollfools_1.0.0_iphoneos-arm64.deb
-Size: 7514232
-MD5sum: 6cb26d39d470966dcf37d51a2aa25f7c
-SHA1: f4ff394cfc175ba500631a44127fbeb7dfac21ab
-SHA256: 39b2e63d03eef449bf1012f48efbc79319dc22d255b9b17b4c057692ecca1156
+Size: 7516076
+MD5sum: 4d3c7b94623b5471e68842303af0fff9
+SHA1: 5cabdef0650be9571c951af98645f8f9d322370f
+SHA256: cc2d238dfe882cfe23a1cbe87ed82411072042bf1ba7fd46d7a7c8fdd50c8e61
 Section: Tweaks
 Description: 「09.14」X_TrollFools
 Author: wangdaodao
@@ -19,10 +19,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.eeveespotify622trollfools_1.0.0_iphoneos-arm64.deb
-Size: 1972408
-MD5sum: dc6a4c080f0eaba66d9f271be2e04791
-SHA1: e35b452a0f10b14064aac3b6045aa5dba2bdc1b3
-SHA256: 8ee895f12ff684fb5c853f9138579b5815492cc05b66d715500f630efe42bcbb
+Size: 1972744
+MD5sum: dcf177c143cb6cc4c6f6634a7cf65444
+SHA1: d66c74b9decba8c573d2e1b9b73862b51df214eb
+SHA256: 2e4a65dea7502e540c27202d68c91e643f1239c67aefbc5a7bacd21421b8078f
 Section: Tweaks
 Description: EeveeSpotify_6.2.2_TrollFools
 Author: wangdaodao
@@ -34,10 +34,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.fakegps_1.0.0_iphoneos-arm64.deb
-Size: 34220
-MD5sum: c7f01a8283d838ac58b46c74266f8375
-SHA1: 45367d74c6a0389d14b7c2f9aca17feb3ce1c3eb
-SHA256: 25807504201beee84839f4a7bae95d16abca82d8486c66d99023351a5c112f6a
+Size: 34320
+MD5sum: 43297491d22bc467a734b6605c1b75e4
+SHA1: 09113044413642644c32e89f0d190e629ba3c448
+SHA256: db7545c3cbb7cd5f3a97c13ea971993ffdc3862d98f82dda1950137ac6a0c8d1
 Section: Tweaks
 Description: FakeGPS
 Author: wangdaodao
@@ -49,10 +49,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.smallboard_1.0.0_iphoneos-arm64.deb
-Size: 3744
-MD5sum: a1639f9799ca08d14de6c194f445491e
-SHA1: 790c2cad3ac34ceff8b051b5956bc5f334fe27e2
-SHA256: c80b39efbaf03e0c26e3ca695a53c074028a060aa8503ac896d05ebca9f76605
+Size: 3872
+MD5sum: 3abb453a7146966bf966755399422f36
+SHA1: 4fd877fa9abd196dbec00f3bff1d409fa3b5dde2
+SHA256: 38759ba5c2ea1e048420e8c10551d612e22dd3a3344f371fc4b5311bedb2df6b
 Section: Tweaks
 Description: SmallBoard@降低键盘
 Author: wangdaodao
@@ -64,10 +64,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.tiktokbh193_1.0.0_iphoneos-arm64.deb
-Size: 832092
-MD5sum: cece579030370bcd50393f0594662104
-SHA1: bccb033d0af785dab411a18084f1c26a96316f5f
-SHA256: b49b24e6a77362b58ceb22d21815fd882ecf61e88939f7f9c41ca16dd7da7abf
+Size: 831140
+MD5sum: 85eb8a1b8119399004f74f4aead68d7a
+SHA1: 66353467ad17ec3c24fba829ef2ab26695c2abdf
+SHA256: 79e0da394f11693bc8ad8979cc7503f71e90377588851bfbc58cb4129eb3b3ec
 Section: Tweaks
 Description: TikTok_BH++1.9.3_秋名山
 Author: wangdaodao
@@ -79,10 +79,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.xnfb1103_1.0.0_iphoneos-arm64.deb
-Size: 7996404
-MD5sum: 2fef6f18afa31e08023aeb50450b4dfe
-SHA1: ee0c8bb230a0af47cd8c8599836e1299b1ee4af0
-SHA256: cd79ced8765796db7d12b7481db29c0ae58e35ae07c1a35a0502795e825fa352
+Size: 7996764
+MD5sum: af95667f3c0978b36c892153b48dc1c7
+SHA1: 33c8450df900ceb032b5c8abc31a721fb33f8064
+SHA256: de1ada898fa3687e90368819f8be384df5f065ae74399bb031f1f0e55be41d02
 Section: Tweaks
 Description: X-NFB_1103_秋名山
 Author: wangdaodao
@@ -94,10 +94,10 @@ Architecture: iphoneos-arm64
 Maintainer: wangdaodao
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: debs/com.wangdaodao.ytplus0812_1.0.0_iphoneos-arm64.deb
-Size: 6457660
-MD5sum: 248fe1be8f4139a264ded88f890319d2
-SHA1: 69cc0c97f37cc05786ef0fd89f6798334ea5e0a3
-SHA256: 12d32d9f804f142e60adfdebbd1473d0db1db1970e06ef7fc8d12155dd0875ba
+Size: 6457876
+MD5sum: 954ce7a05086247d0f930d50fdc98579
+SHA1: 71b2803b5da5922effe4ead81b00aca21c1d58a5
+SHA256: 827a8c9fd2407a9abec5d4be3876417550c403f43db63f9c9cc2f72fed43c979
 Section: Tweaks
 Description: YTPlus_0812_秋名山
 Author: wangdaodao

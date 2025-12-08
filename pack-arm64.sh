@@ -102,8 +102,9 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
     mkdir -p "$TEMP_DIR/DEBIAN"
     mkdir -p "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
 
-    # 复制 dylib 文件
+    # 复制 dylib 文件并设置可执行权限
     cp "$DYLIB_FILE" "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/"
+    chmod 755 "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/$(basename "$DYLIB_FILE")"
 
     # 创建 plist 文件
     DYLIB_NAME=$(basename "$DYLIB_FILE")
@@ -137,6 +138,20 @@ Author: ${DEFAULT_AUTHOR}
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
 EOF
+
+    # 创建 postinst 脚本（安装后重启 SpringBoard）
+    cat > "$TEMP_DIR/DEBIAN/postinst" << 'POSTINST_EOF'
+#!/bin/bash
+if [[ -f /var/jb/usr/bin/sbreload ]]; then
+    /var/jb/usr/bin/sbreload
+elif [[ -f /usr/bin/sbreload ]]; then
+    /usr/bin/sbreload
+else
+    killall -9 SpringBoard 2>/dev/null || true
+fi
+exit 0
+POSTINST_EOF
+    chmod 755 "$TEMP_DIR/DEBIAN/postinst"
 
     # 打包
     DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
@@ -238,6 +253,7 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
         for DYLIB_PATH in $FOUND_DYLIBS; do
             echo "    - 添加插件: $(basename "$DYLIB_PATH")"
             cp "$DYLIB_PATH" "$DIR_DYLIB/"
+            chmod 755 "$DIR_DYLIB/$(basename "$DYLIB_PATH")"
             
             # 处理配套的 plist
             PLIST_SRC="${DYLIB_PATH%.dylib}.plist"
@@ -340,6 +356,20 @@ Author: ${DEFAULT_AUTHOR}
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
 EOF
+
+    # 创建 postinst 脚本（安装后重启 SpringBoard）
+    cat > "$TEMP_DIR/DEBIAN/postinst" << 'POSTINST_EOF'
+#!/bin/bash
+if [[ -f /var/jb/usr/bin/sbreload ]]; then
+    /var/jb/usr/bin/sbreload
+elif [[ -f /usr/bin/sbreload ]]; then
+    /usr/bin/sbreload
+else
+    killall -9 SpringBoard 2>/dev/null || true
+fi
+exit 0
+POSTINST_EOF
+    chmod 755 "$TEMP_DIR/DEBIAN/postinst"
 
     # 打包
     DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
