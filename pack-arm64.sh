@@ -3,7 +3,7 @@
 # 批量将 .dylib 文件打包成 arm64 .deb
 # 自动处理指定目录下的所有 .dylib 文件
 
-set -e
+# set -e
 
 # 颜色定义
 RED='\033[0;31m'
@@ -163,7 +163,7 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
 
     FILENAME=$(basename "$ZIP_FILE" .zip)
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "${BLUE}📦 处理 ZIP: $FILENAME${NC}"
+    echo -e "${BLUE}📦 处理 ZIP: $FILENAME (All-in-One 模式)${NC}"
 
     # 根据文件名智能推断包信息
     PACKAGE_ID="com.${DEFAULT_AUTHOR}.$(echo "$FILENAME" | sed 's/[^a-zA-Z0-9]//g' | tr '[:upper:]' '[:lower:]')"
@@ -198,76 +198,56 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
     TEMP_DIR="temp_${PACKAGE_ID}"
     rm -rf "$TEMP_DIR"
     mkdir -p "$TEMP_DIR/DEBIAN"
-    mkdir -p "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
+    
+    # 建立标准目录结构 (Rootless /var/jb)
+    DIR_DYLIB="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
+    DIR_FRAMEWORKS="$TEMP_DIR/var/jb/Library/Frameworks"
+    DIR_BUNDLES="$TEMP_DIR/var/jb/Library/PreferenceBundles"
+    
+    mkdir -p "$DIR_DYLIB"
+    mkdir -p "$DIR_FRAMEWORKS"
+    mkdir -p "$DIR_BUNDLES"
 
-    # 解压 zip 文件
-    EXTRACT_DIR="$TEMP_DIR/extract"
-    mkdir -p "$EXTRACT_DIR"
-    if unzip -q "$ZIP_FILE" -d "$EXTRACT_DIR"; then
-        echo "  解压成功"
+    # 解压 zip 文件到临时提取区
+    EXTRACT_ROOT="temp_extract_${FILENAME}"
+    rm -rf "$EXTRACT_ROOT"
+    mkdir -p "$EXTRACT_ROOT"
+    
+    if unzip -q "$ZIP_FILE" -d "$EXTRACT_ROOT"; then
+        echo "  解压成功，开始智能提取..."
     else
         echo -e "  ${RED}❌ 解压失败${NC}"
         ((FAILED_COUNT++))
         FAILED_FILES+=("$FILENAME")
         rm -rf "$TEMP_DIR"
+        rm -rf "$EXTRACT_ROOT"
         continue
     fi
 
-    # 查找解压后的 dylib 文件（排除framework中的dylib）
-    EXTRACTED_DYLIB=$(find "$EXTRACT_DIR" -name "*.dylib" -not -path "*/framework/*" -not -path "*/Frameworks/*" | head -1)
-    if [ -z "$EXTRACTED_DYLIB" ]; then
-        echo -e "  ${RED}❌ 未找到主 dylib 文件${NC}"
-        ((FAILED_COUNT++))
-        FAILED_FILES+=("$FILENAME")
-        rm -rf "$TEMP_DIR"
-        continue
-    fi
+    # ─── 智能扁平化提取资源 ───
+    
+    HAS_CONTENT=false
 
-    # 复制所有文件到正确的越狱路径
-    echo "  复制文件到越狱路径..."
-
-    # 复制所有文件，保持目录结构
-    find "$EXTRACT_DIR" -type f | while read -r file; do
-        # 获取相对路径
-        REL_PATH="${file#$EXTRACT_DIR/}"
-
-        # 确定目标路径
-        if [[ "$REL_PATH" == *.dylib ]]; then
-            # dylib文件放到MobileSubstrate目录
-            TARGET_DIR="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
-            mkdir -p "$TARGET_DIR"
-            cp "$file" "$TARGET_DIR/"
-        elif [[ "$REL_PATH" == *.framework/* ]] || [[ "$REL_PATH" == Frameworks/* ]]; then
-            # framework文件放到Frameworks目录
-            TARGET_DIR="$TEMP_DIR/var/jb/Library/Frameworks/$(dirname "$REL_PATH")"
-            mkdir -p "$TARGET_DIR"
-            cp "$file" "$TARGET_DIR/"
-        elif [[ "$REL_PATH" == *.bundle/* ]]; then
-            # bundle文件放到PreferenceBundles目录
-            TARGET_DIR="$TEMP_DIR/var/jb/Library/PreferenceBundles/$(dirname "$REL_PATH")"
-            mkdir -p "$TARGET_DIR"
-            cp "$file" "$TARGET_DIR/"
-        else
-            # 其他文件放到MobileSubstrate目录
-            TARGET_DIR="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries"
-            mkdir -p "$TARGET_DIR"
-            cp "$file" "$TARGET_DIR/"
-        fi
-    done
-
-    # 删除解压目录，避免打包时包含不需要的文件
-    rm -rf "$EXTRACT_DIR"
-
-    # 查找主dylib文件
-    DYLIB_NAME=$(basename "$EXTRACTED_DYLIB")
-    PLIST_FILE="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
-
-    # 检查plist文件是否存在
-    if [ -f "$PLIST_FILE" ]; then
-        echo "  使用现有 plist 文件"
-    else
-        # 创建新的 plist 文件
-        cat > "$PLIST_FILE" << EOF
+    # 1. 查找并复制主 dylib (排除 framework 内部的 dylib)
+    # find 查找所有 dylib
+    # grep -v 排除路径中包含 framework 的情况 (简单过滤)
+    FOUND_DYLIBS=$(find "$EXTRACT_ROOT" -name "*.dylib" | grep -v ".framework/" | grep -v ".bundle/" | grep -v "__MACOSX")
+    
+    if [ -n "$FOUND_DYLIBS" ]; then
+        IFS=$'\n'
+        for DYLIB_PATH in $FOUND_DYLIBS; do
+            echo "    - 添加插件: $(basename "$DYLIB_PATH")"
+            cp "$DYLIB_PATH" "$DIR_DYLIB/"
+            
+            # 处理配套的 plist
+            PLIST_SRC="${DYLIB_PATH%.dylib}.plist"
+            if [ -f "$PLIST_SRC" ]; then
+                cp "$PLIST_SRC" "$DIR_DYLIB/"
+            else
+                # 如果没有 plist，则自动生成一个
+                DYLIB_BASE=$(basename "$DYLIB_PATH")
+                PLIST_DEST="$DIR_DYLIB/${DYLIB_BASE%.dylib}.plist"
+                cat > "$PLIST_DEST" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -282,8 +262,71 @@ for ZIP_FILE in "${ZIP_FILES[@]}"; do
 </dict>
 </plist>
 EOF
-        echo "  创建新的 plist 文件"
+            fi
+            HAS_CONTENT=true
+        done
+        IFS=$' \t\n'
     fi
+
+    # 2. 查找并复制 Frameworks
+    # 查找所有 .framework 目录，且它自己不是嵌套在另一个 framework 里 (简易判断)
+    FOUND_FRAMEWORKS=$(find "$EXTRACT_ROOT" -name "*.framework" -type d | grep -v "__MACOSX")
+    
+    if [ -n "$FOUND_FRAMEWORKS" ]; then
+        IFS=$'\n'
+        for FW_PATH in $FOUND_FRAMEWORKS; do
+            FW_NAME=$(basename "$FW_PATH")
+            # 简单去重：如果目标目录已经有同名文件夹，可能是嵌套扫描到了，跳过
+            if [ -d "$DIR_FRAMEWORKS/$FW_NAME" ]; then
+                continue
+            fi
+            
+            # 只有当父目录不是另一个 framework 时才复制 (避免复制 Framework 内部的子 Framework，通常 Framework 是独立的)
+            # 或者更简单的：我们假设用户 zip 里的 framework 都是需要安装到 /Library/Frameworks 的
+            if [[ "$FW_PATH" == *".framework/"*".framework" ]]; then
+                continue
+            fi
+            
+            echo "    - 添加框架: $FW_NAME"
+            cp -R "$FW_PATH" "$DIR_FRAMEWORKS/"
+        done
+        IFS=$' \t\n'
+    fi
+
+    # 3. 查找并复制 Bundles (PreferenceBundles)
+    FOUND_BUNDLES=$(find "$EXTRACT_ROOT" -name "*.bundle" -type d | grep -v "__MACOSX")
+    
+    if [ -n "$FOUND_BUNDLES" ]; then
+        IFS=$'\n'
+        for BUNDLE_PATH in $FOUND_BUNDLES; do
+            BUNDLE_NAME=$(basename "$BUNDLE_PATH")
+            if [ -d "$DIR_BUNDLES/$BUNDLE_NAME" ]; then continue; fi
+            
+            # 排除 Framework 内部的 bundle (资源包)
+            if [[ "$BUNDLE_PATH" == *".framework/"* ]]; then
+                continue
+            fi
+            
+            echo "    - 添加资源包: $BUNDLE_NAME"
+            cp -R "$BUNDLE_PATH" "$DIR_BUNDLES/"
+        done
+        IFS=$' \t\n'
+    fi
+
+    # 检查是否提取到了内容
+    if [ "$HAS_CONTENT" = false ]; then
+         echo -e "  ${RED}❌ ZIP 中未找到有效的 .dylib 文件${NC}"
+        ((FAILED_COUNT++))
+        FAILED_FILES+=("$FILENAME")
+        rm -rf "$TEMP_DIR"
+        rm -rf "$EXTRACT_ROOT"
+        continue
+    fi
+
+    # 清理空目录 (如果某些目录没放东西，dpkg 也可以处理，但清理一下更干净)
+    rmdir "$DIR_FRAMEWORKS" 2>/dev/null
+    rmdir "$DIR_BUNDLES" 2>/dev/null
+
 
     # 创建 control 文件 (arm64架构)
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
@@ -313,6 +356,7 @@ EOF
 
     # 清理
     rm -rf "$TEMP_DIR"
+    rm -rf "$EXTRACT_ROOT"
 done
 
 echo ""
