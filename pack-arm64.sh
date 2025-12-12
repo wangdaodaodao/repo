@@ -118,11 +118,21 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
     cp "$DYLIB_FILE" "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/"
     chmod 755 "$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/$(basename "$DYLIB_FILE")"
 
-    # 创建 plist 文件
+    # 创建/复制 plist 文件
     DYLIB_NAME=$(basename "$DYLIB_FILE")
-    PLIST_FILE="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
-
-    cat > "$PLIST_FILE" << EOF
+    PLIST_DEST="$TEMP_DIR/var/jb/Library/MobileSubstrate/DynamicLibraries/${DYLIB_NAME%.dylib}.plist"
+    
+    # 检查是否有自定义的 plist 文件（与 dylib 同目录下同名的 .plist）
+    CUSTOM_PLIST="${DYLIB_FILE%.dylib}.plist"
+    
+    if [ -f "$CUSTOM_PLIST" ]; then
+        # 使用自定义 plist 文件
+        echo "    📋 使用自定义 plist: $(basename "$CUSTOM_PLIST")"
+        cp "$CUSTOM_PLIST" "$PLIST_DEST"
+    else
+        # 自动生成 plist 文件
+        echo "    ⚠️  未找到自定义 plist，使用默认 Bundle ID: $BUNDLE_ID"
+        cat > "$PLIST_DEST" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -137,6 +147,9 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
 </dict>
 </plist>
 EOF
+    fi
+    
+    PLIST_FILE="$PLIST_DEST"
 
     # 创建 control 文件
     # 架构使用 iphoneos-arm64，支持 arm64/arm64e 设备
