@@ -138,12 +138,13 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
 </plist>
 EOF
 
-    # 创建 control 文件 (arm64架构)
+    # 创建 control 文件
+    # 注意：Architecture 使用 iphoneos-arm（Cydia/Sileo 标准，兼容所有 arm64/arm64e 设备）
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -151,8 +152,11 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
+    # 设置 plist 文件权限为 644
+    chmod 644 "$PLIST_FILE"
+
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
@@ -349,13 +353,16 @@ EOF
     rmdir "$DIR_FRAMEWORKS" 2>/dev/null
     rmdir "$DIR_BUNDLES" 2>/dev/null
 
+    # 设置所有 plist 文件权限为 644
+    find "$DIR_DYLIB" -name "*.plist" -exec chmod 644 {} \; 2>/dev/null
 
-    # 创建 control 文件 (arm64架构)
+    # 创建 control 文件
+    # 注意：Architecture 使用 iphoneos-arm（Cydia/Sileo 标准，兼容所有 arm64/arm64e 设备）
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -364,7 +371,7 @@ Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
