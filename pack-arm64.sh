@@ -139,12 +139,12 @@ for DYLIB_FILE in "${DYLIB_FILES[@]}"; do
 EOF
 
     # 创建 control 文件
-    # 注意：Architecture 使用 iphoneos-arm（Cydia/Sileo 标准，兼容所有 arm64/arm64e 设备）
+    # 架构使用 iphoneos-arm64，支持 arm64/arm64e 设备
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -156,7 +156,7 @@ EOF
     chmod 644 "$PLIST_FILE"
 
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
@@ -357,12 +357,13 @@ EOF
     find "$DIR_DYLIB" -name "*.plist" -exec chmod 644 {} \; 2>/dev/null
 
     # 创建 control 文件
-    # 注意：Architecture 使用 iphoneos-arm（Cydia/Sileo 标准，兼容所有 arm64/arm64e 设备）
+    # 创建 control 文件
+    # 架构使用 iphoneos-arm64，支持 arm64/arm64e 设备
     cat > "$TEMP_DIR/DEBIAN/control" << EOF
 Package: ${PACKAGE_ID}
 Name: ${PACKAGE_NAME}
 Version: ${DEFAULT_VERSION}
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Description: ${PACKAGE_NAME}
 Maintainer: ${DEFAULT_AUTHOR}
 Author: ${DEFAULT_AUTHOR}
@@ -371,7 +372,7 @@ Depends: mobilesubstrate (>= 0.9.5000)
 EOF
 
     # 打包
-    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm.deb"
+    DEB_NAME="${PACKAGE_ID}_${DEFAULT_VERSION}_iphoneos-arm64.deb"
     OUTPUT_PATH="debs/${DEB_NAME}"
 
     if dpkg-deb -b "$TEMP_DIR" "$OUTPUT_PATH" 2>/dev/null; then
