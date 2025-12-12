@@ -16,6 +16,25 @@ Icon: https://mieing.github.io/icon/CCTunnelTap.png
 Name: CCTunnelTap
 Sileodepiction: https://mieing.github.io/JSON/CCTunnelTap.json
 
+Package: com.huami.dyyy
+Version: 2.2-8
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 2584
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: debs/dyyy_2.2-8_1591_iphoneos-arm64.deb
+Size: 525286
+MD5sum: 239b4db70b923a9901e4186ca9a282d3
+SHA1: d9217bdd22217d0bfd6c6fd1890aa8f63fed5b94
+SHA256: 91f159b2098f237b0a8ff054e95deec3eb89d375d4f73434a9defd544344a29f
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Icon: https://Mieing.Github.io/repo/file/TikTok.png
+Name: DYYY
+
 Package: com.hw.nomoraw
 Version: 0.0.1
 Architecture: iphoneos-arm64
