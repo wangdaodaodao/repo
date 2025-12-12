@@ -1,3 +1,21 @@
+Package: cctunneltap
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: fries
+Installed-Size: 148
+Depends: mobilesubstrate, com.opa334.ccsupport
+Filename: debs/cctunneltap_1.0.0_iphoneos-arm64.deb
+Size: 25652
+MD5sum: 35214e365a48a9aa66e056f3e0b5940f
+SHA1: 2a1ace235eddc6d2a9b890fd3519c54ea1ed804d
+SHA256: 484422e4f5d22b03b11ef7596378e6acc25ec421caea380c61d8b5931dedb989
+Section: Tweaks
+Description: CCTunnelTap
+Author: fries
+Icon: https://mieing.github.io/icon/CCTunnelTap.png
+Name: CCTunnelTap
+Sileodepiction: https://mieing.github.io/JSON/CCTunnelTap.json
+
 Package: com.hw.nomoraw
 Version: 0.0.1
 Architecture: iphoneos-arm64
@@ -13,111 +31,6 @@ Section: Tweaks
 Description: 解锁专业版 - TG：@HelloWorld_1024
 Author: 🅷🆆
 Name: 🅷🆆 NOMO RAW
-
-Package: com.wangdaodao.0914xtrollfools
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.0914xtrollfools_1.0.0_iphoneos-arm64.deb
-Size: 7517692
-MD5sum: e5adf763f27c8f74bb4f6a28e5cad6c6
-SHA1: 3f6e0377c7dcc39a982bb704e85cd3a425c89114
-SHA256: d7bd3885b091d785481e4aa715068c13c5e48962c9138b0d17aadb8307d7393d
-Section: Tweaks
-Description: 「09.14」X_TrollFools
-Author: wangdaodao
-Name: 「09.14」X_TrollFools
-
-Package: com.wangdaodao.eeveespotify622trollfools
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.eeveespotify622trollfools_1.0.0_iphoneos-arm64.deb
-Size: 1972564
-MD5sum: bf599fa4fbebb2b42f9ed46683cd1a1f
-SHA1: aceebfe95398cd557d1b1a54954e55226f09ac18
-SHA256: 22503f36d9aa21833c7367968752f68fa34f6bc2e5de5a6eb3098d0c77dda111
-Section: Tweaks
-Description: EeveeSpotify_6.2.2_TrollFools
-Author: wangdaodao
-Name: EeveeSpotify_6.2.2_TrollFools
-
-Package: com.wangdaodao.fakegps
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.fakegps_1.0.0_iphoneos-arm64.deb
-Size: 34316
-MD5sum: e8ee7d20dab712edff3bce0b4038c97d
-SHA1: a6f6aa0ff4cd714209c75926278cc5e55df31c59
-SHA256: 74905efaaf1482e715d0d23c7e93a571b90ec3decab353151c4dfc991d04ae89
-Section: Tweaks
-Description: FakeGPS
-Author: wangdaodao
-Name: FakeGPS
-
-Package: com.wangdaodao.smallboard
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.smallboard_1.0.0_iphoneos-arm64.deb
-Size: 3744
-MD5sum: ffad443964f503c692b987b8f0443591
-SHA1: 6c13332f3073ac0ad7249a1d13bc44e850b436e5
-SHA256: ade4ede140887240df2b8631440de8ac40597638c95768b239bf7924d7cc812a
-Section: Tweaks
-Description: SmallBoard@降低键盘
-Author: wangdaodao
-Name: SmallBoard@降低键盘
-
-Package: com.wangdaodao.tiktokbh193
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.tiktokbh193_1.0.0_iphoneos-arm64.deb
-Size: 832660
-MD5sum: 73841875a7ff787f4eb3190cfe53b9de
-SHA1: f5fc809de6a4a03e7f9f8bd7547c3a7e4fcc6901
-SHA256: 992ad82954851441dffb17bf35c01568c0ab423a07f674dad50a10cc56f48ee7
-Section: Tweaks
-Description: TikTok_BH++1.9.3_秋名山
-Author: wangdaodao
-Name: TikTok_BH++1.9.3_秋名山
-
-Package: com.wangdaodao.xnfb1103
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.xnfb1103_1.0.0_iphoneos-arm64.deb
-Size: 7994896
-MD5sum: 6da9962b3cf514c369b9049d61517edc
-SHA1: 380bf09f83ec90bbe2f7ef086723c74de05d00db
-SHA256: a07477c10da1f2a81c78d7bd8b49885686115c4140684bb9b4a11974cb955f95
-Section: Tweaks
-Description: X-NFB_1103_秋名山
-Author: wangdaodao
-Name: X-NFB_1103_秋名山
-
-Package: com.wangdaodao.ytplus0812
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: wangdaodao
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: debs/com.wangdaodao.ytplus0812_1.0.0_iphoneos-arm64.deb
-Size: 6463500
-MD5sum: d612a5f6d33ff4254686cd24088a4972
-SHA1: d120b1894873de9a5ad6866dd93de2e1df69cb2a
-SHA256: 9cbf400e329d05a9ba5d292d0baf44d8c3b83bb2db4a97f101b9b9b4b5eea744
-Section: Tweaks
-Description: YTPlus_0812_秋名山
-Author: wangdaodao
-Name: YTPlus_0812_秋名山
 
 Package: com.xx.xhshook
 Version: 1.1.6-5
